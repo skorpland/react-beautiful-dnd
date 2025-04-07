@@ -1,5 +1,6 @@
 /* eslint-disable flowtype/require-valid-file-annotation */
-
+import alias from '@rollup/plugin-alias';
+import path from 'path';
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import babel from 'rollup-plugin-babel';
@@ -37,8 +38,8 @@ const commonjsArgs = {
   // https://stackoverflow.com/questions/50080893/rollup-error-isvalidelementtype-is-not-exported-by-node-modules-react-is-inde/50098540
   namedExports: {
     'node_modules/react-is/index.js': [
-      'isValidElementType',
-      'isContextConsumer',
+     'isValidElementType',
+       'isContextConsumer',
     ],
   },
 };
@@ -79,6 +80,14 @@ export default [
     // Only deep dependency required is React
     external: ['react', 'react-dom'],
     plugins: [
+      alias({
+        entries: [
+          {
+            find: 'react-is',
+            replacement: path.resolve(__dirname, 'node_modules/react-is'),
+          },
+        ],
+      }),
       json(),
       babel(getBabelOptions({ useESModules: true })),
       resolve({ extensions }),

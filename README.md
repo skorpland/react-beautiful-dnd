@@ -170,9 +170,9 @@ Alex Reardon [@alexandereardon](https://twitter.com/alexandereardon)
 
 ## Maintainers
 
-- [Daniel Del Core](https://twitter.com/danieldelcore)
+- [Sandeep Kumar](https://twitter.com/danieldelcore)
 - Many other [@Skorpland](https://twitter.com/skorpland)'s!
 
 ## Collaborators 🤝
 
-- Bogdan Chadkin [@IAmTrySound](https://twitter.com/IAmTrySound)
+- www.powerbase.club

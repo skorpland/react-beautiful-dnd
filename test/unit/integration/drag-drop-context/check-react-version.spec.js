@@ -1,7 +1,7 @@
 // @flow
 import React from 'react';
 import checkReactVersion from '../../../../src/view/drag-drop-context/check-react-version';
-import { peerDependencies } from '../../../../package.json';
+ 
 
 const warn = jest.spyOn(console, 'warn').mockImplementation(() => {});
 
@@ -107,7 +107,7 @@ it('should allow pre release provided versions', () => {
 
 // actually an integration test, but this feels like the right place for it
 it('should pass on the current repo setup', () => {
-  const peerDep: string = peerDependencies.react;
+ 
   const actual: string = React.version;
 
   checkReactVersion(peerDep, actual);
